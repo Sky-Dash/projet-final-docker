@@ -1,0 +1,192 @@
+/* ── Profile Layout ── */
+.profile-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* ── Sidebar ── */
+.profile-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: rgba(15, 15, 15, 0.98);
+    border-right: 2px solid var(--red);
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.profile-username {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.profile-email {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.profile-role {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.profile-divider {
+    width: 100%;
+    height: 1px;
+    background: #222;
+    margin: 6px 0;
+}
+
+.profile-stat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.profile-stat:last-child {
+    border-bottom: none;
+}
+
+.profile-stat-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.profile-stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+/* ── Main Content ── */
+.profile-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+.profile-section {
+    background: var(--bg-card);
+    border: 1px solid #222;
+}
+
+.profile-section-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-section-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+.profile-section-header span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.profile-section-body {
+    padding: 24px;
+}
+
+/* ── Games Grid ── */
+.profile-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.profile-game-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px solid #222;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.profile-game-card:hover {
+    border-color: var(--red);
+    box-shadow: 0 0 20px var(--red-glow);
+}
+
+.profile-game-img {
+    width: 100%;
+    height: 200px;
+    background: #1a1a1a;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-game-info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-game-info h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.profile-game-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 2px;
+    background: #222;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--red);
+    box-shadow: 0 0 6px var(--red-glow);
+}
+
+/* ── Empty State ── */
+.empty-state {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.empty-state a {
+    color: var(--red);
+    text-decoration: none;
+}
