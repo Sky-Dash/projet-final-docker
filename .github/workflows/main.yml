@@ -64,7 +64,7 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-            cd your-project &&
+            cd projetdocker-louis-lilian &&
             git pull &&
             docker compose down &&
             docker compose up -d --build
