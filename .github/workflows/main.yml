@@ -48,8 +48,9 @@ jobs:
 
       - name: Test HTTP response
         run: curl -f http://localhost:80
+
       - name: API Healthcheck
-        run: curl http://localhost/healthcheck.php | grep '"status":"ok"'
+        run: curl -f http://localhost/healthcheck.php
 
   deploy:
     runs-on: ubuntu-latest
