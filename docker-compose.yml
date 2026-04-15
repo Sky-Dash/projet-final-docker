@@ -10,6 +10,11 @@ services:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASS}
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
     ports:
       - "${DB_PORT}:3306"
     volumes:
@@ -28,7 +33,9 @@ services:
       DB_USER: ${DB_USER}
       DB_PASS: ${DB_PASS}
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+
     networks:
       - backend
       - frontend
