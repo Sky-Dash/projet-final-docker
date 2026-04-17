@@ -9,7 +9,7 @@ $games  = $result['games'] ?? [];
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Apex Arena | Home</title>
+    <title>Apex Arena 2.0 | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
